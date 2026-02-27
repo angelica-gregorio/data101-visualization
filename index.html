@@ -366,7 +366,7 @@
                     </div>
                     
                     <div class="insight-block" id="insightBox">
-                        <strong>💡 Key Insight:</strong><br>
+                        <strong><span class="material-symbols-rounded" style="font-size: 18px; vertical-align: middle;">lightbulb</span> Key Insight:</strong><br>
                         Wealthier regions (NCR, Calabarzon) consistently show a <strong>3-year delay</strong> in first birth age compared to rural averages.
                     </div>
 
@@ -431,7 +431,7 @@
                 // Update Context
                 document.getElementById('regionLabel').innerText = reg.name;
                 document.getElementById('insightBox').innerHTML = 
-                    `<strong>📍 Regional Data:</strong><br>${reg.name} has an Avg Age of 1st Birth of <strong>${reg.age}</strong> and a Teenage Pregnancy rate of <strong>${reg.teen}</strong>.`;
+                    `<strong><span class="material-symbols-rounded" style="font-size: 18px; vertical-align: middle;">location_on</span> Regional Data:</strong><br>${reg.name} has an Avg Age of 1st Birth of <strong>${reg.age}</strong> and a Teenage Pregnancy rate of <strong>${reg.teen}</strong>.`;
                 
                 // Update KPIs
                 document.getElementById('kpiAge').innerText = reg.age;
@@ -502,7 +502,7 @@
                 kpiTeen.innerHTML = "8.1%";
                 kpiTeen.style.color = "var(--success)";
                 insightBox.style.borderLeftColor = "var(--success)";
-                insightBox.innerHTML = "<strong>✅ Simulation Active:</strong><br>Mandatory secondary education is projected to reduce teenage pregnancies by <strong>35%</strong>.";
+                insightBox.innerHTML = "<strong><span class=\"material-symbols-rounded\" style=\"font-size: 18px; vertical-align: middle; color: var(--success);\">check_circle</span> Simulation Active:</strong><br>Mandatory secondary education is projected to reduce teenage pregnancies by <strong>35%</strong>.";
                 barChart.data.datasets[0].backgroundColor = Array(4).fill('#388E3C');
                 barChart.update();
             } else {
@@ -510,7 +510,7 @@
                 kpiTeen.innerHTML = "12.5%";
                 kpiTeen.style.color = "var(--accent)";
                 insightBox.style.borderLeftColor = "#0EA5E9";
-                insightBox.innerHTML = "<strong>💡 Key Insight:</strong><br>Wealthier regions (NCR, Calabarzon) consistently show a <strong>3-year delay</strong> in first birth age.";
+                insightBox.innerHTML = "<strong><span class=\"material-symbols-rounded\" style=\"font-size: 18px; vertical-align: middle;\">lightbulb</span> Key Insight:</strong><br>Wealthier regions (NCR, Calabarzon) consistently show a <strong>3-year delay</strong> in first birth age.";
                 barChart.data.datasets[0].backgroundColor = ['#FF7043', '#FFAB91', '#80CBC4', '#00796B'];
                 barChart.update();
             }
